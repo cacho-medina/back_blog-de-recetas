@@ -1,4 +1,5 @@
 import Receta from "../database/models/receta.js";
+import resultadoValidacion from "../helpers/resultadoValidacion.js";
 
 export const getRecetas = async (req, res) => {
     try {

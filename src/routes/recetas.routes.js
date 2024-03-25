@@ -6,14 +6,15 @@ import {
     getRecetas,
     editarReceta,
 } from "../controllers/recetas.controllers.js";
+import validacionReceta from "../helpers/validacionReceta.js";
 
 const router = Router();
 
-router.route("/recetas").get(getRecetas).post(crearReceta);
+router.route("/recetas").get(getRecetas).post([validacionReceta], crearReceta);
 router
     .route("/recetas/:id")
     .get(getRecetaById)
     .delete(deleteReceta)
-    .put(editarReceta);
+    .put([validacionReceta], editarReceta);
 
 export default router;

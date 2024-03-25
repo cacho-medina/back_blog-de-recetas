@@ -18,18 +18,17 @@ const userSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        validate: {
-            validator: function (value) {
-                /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(value);
-            },
-            message: (props) => `${props.value} no es un email valido`,
-        },
+        match: [/.+\@.+\..+/, "Por favor ingrese un correo válido"],
     },
     password: {
         type: String,
         required: true,
         minLength: 8,
-        maxLength: 12,
+        maxLength: 16,
+        match: [
+            /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*.-]).{8,16}$/,
+            "Por favor ingrese una contraseña valida",
+        ],
     },
 });
 
