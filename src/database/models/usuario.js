@@ -27,7 +27,7 @@ const userSchema = new Schema({
         maxLength: 16,
         match: [
             /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*.-]).{8,16}$/,
-            "Por favor ingrese una contraseña valida",
+            "La contraseña debe tener al menos una letra minuscula, una letra mayuscula, un numero y un caracter especial",
         ],
     },
 });
