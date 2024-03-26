@@ -21,6 +21,16 @@ export const getUser = async (req, res) => {
     }
 };
 
+export const getUserByCredentials = async (req, res) => {
+    try {
+        const users = await Usuario.find();
+        res.status(200).json(users);
+    } catch (error) {
+        console.error(error);
+        res.status(404).json({ message: "Error al obtener los usuarios" });
+    }
+};
+
 export const deleteUser = async (req, res) => {
     try {
         const usuario = await Usuario.findById(req.params.id);
