@@ -6,8 +6,13 @@ Servidor para aplicacion de blog de recetas donde podras compartir recetas de tu
 
 #### recetas
 
-https://blog-de-recetas.vercel.app/api/recetas
+https://back-blog-de-recetas.vercel.app/api/recetas
 
 #### usuarios
 
-https://blog-de-recetas.vercel.app/api/usuarios
+https://back-blog-de-recetas.vercel.app/api/usuarios
+
+##Usuario de prueba
+
+visit@gmail.com
+leo10MESSI.
